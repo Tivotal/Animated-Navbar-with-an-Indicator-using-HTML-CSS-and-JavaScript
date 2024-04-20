@@ -1,0 +1,83 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #4070f4, #0b8c4c);
+}
+
+.wrapper {
+  position: relative;
+  width: 450px;
+  height: 80px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .navbar {
+  position: relative;
+  display: flex;
+}
+
+.wrapper .navbar li {
+  list-style: none;
+}
+
+.wrapper .navbar li a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.wrapper .navbar li a i {
+  font-size: 25px;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #222;
+  transition: 0.3s;
+}
+
+.wrapper .navbar li:not(.active):hover a i {
+  filter: drop-shadow(0 0 4px #222);
+}
+
+.wrapper .navbar li.active a i {
+  -webkit-text-fill-color: #222;
+}
+
+.wrapper .indicator {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #222;
+  border-radius: 50%;
+  bottom: -22px;
+  left: 55px;
+  transition: 0.3s linear;
+}
+
+.wrapper .indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #222;
+  border-radius: 50%;
+  top: -92px;
+}
